@@ -6,7 +6,6 @@ import img from "../public/img.jpg";
 import { Button, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
-import { key } from "../apiKeys";
 
 export default function Home() {
   const [offsetY, setOffsetY] = useState(0);
