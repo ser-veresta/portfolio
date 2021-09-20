@@ -11,6 +11,8 @@ export default function Home() {
   const [offsetY, setOffsetY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
+  console.log(process.env);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
