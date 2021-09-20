@@ -11,15 +11,15 @@ export default function Home() {
   const [offsetY, setOffsetY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(process.env.NEXT_PUBLIC_USER_ID);
-
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_oxjvv77", process.env.TEMPLATE_ID, e.target, process.env.USER_ID).then(
-      (res) => console.log(res.text),
-      (err) => console.log(err.text)
-    );
+    emailjs
+      .sendForm("service_oxjvv77", process.env.NEXT_PUBLIC_TEMPLATE_ID, e.target, process.env.NEXT_PUBLIC_USER_ID)
+      .then(
+        (res) => console.log(res.text),
+        (err) => console.log(err.text)
+      );
 
     e.target.reset();
   };
