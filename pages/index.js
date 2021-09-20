@@ -15,7 +15,7 @@ export default function Home() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_oxjvv77", key.TEMPLATE_ID, e.target, key.USER_ID).then(
+    emailjs.sendForm("service_oxjvv77", process.env.TEMPLATE_ID, e.target, process.env.USER_ID).then(
       (res) => console.log(res.text),
       (err) => console.log(err.text)
     );
