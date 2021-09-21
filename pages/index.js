@@ -115,15 +115,15 @@ export default function Home() {
         </nav>
       </header>
 
-      {offsetY > 10 && <div id="about" className="min-h-16 w-full"></div>}
-
-      <div className="w-11/12 m-auto relative z-10 overflow-hidden">
+      <div className="w-11/12 relative m-auto z-10 overflow-hidden">
         <BgSquare t={`${150 - offsetY * 0.02}vh`} />
         <BgSquare t={`${140 - offsetY * 0.02}vh`} l="30%" />
         <BgSquare t={`${350 - offsetY * 0.02}vh`} l="40%" r="20" />
         <BgSquare t={`${340 - offsetY * 0.02}vh`} l="90%" r="20" />
 
         {/* About Section */}
+
+        {offsetY > 10 && <div id="about" className="min-h-16 w-full"></div>}
 
         <section
           style={{ opacity: offsetY > 80 ? -0.0028 * offsetY + 1 : 1 }}
@@ -280,9 +280,7 @@ export default function Home() {
 
         {/* Contact Seection */}
 
-        <h1 id="contact" className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">
-          Contact Me
-        </h1>
+        <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">Contact Me</h1>
         <section className="pb-10">
           <form
             onSubmit={sendEmail}
@@ -319,7 +317,7 @@ export default function Home() {
               type="text"
               placeholder="what do you want to say.."
             />
-            <Button className="m-auto mt-8 md:w-2/5" type="submit">
+            <Button id="contact" className="m-auto mt-8 md:w-2/5" type="submit">
               contact me
             </Button>
           </form>
