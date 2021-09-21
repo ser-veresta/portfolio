@@ -22,6 +22,7 @@ transform
 export const Button = tw.button`
 border-primary-main
 border-2
+bg-gray-50
 hover:bg-primary-main
 py-2
 px-3

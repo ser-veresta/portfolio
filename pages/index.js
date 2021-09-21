@@ -77,7 +77,9 @@ export default function Home() {
             </ul>
           </nav>
           <Button className="mr-10 hidden md:inline-block">
-            Resume <i className="fas fa-download"></i>
+            <a href="https://store1.gofile.io/download/2134bc70-7513-4f49-b2fd-c8c2cef56700/eResume.pdf">
+              Resume <i className="fas fa-download"></i>
+            </a>
           </Button>
           <Button onClick={() => setIsOpen((i) => !i)} className="mr-4 h-4/6 border-none md:hidden">
             <i className="fas fa-bars"></i>
@@ -110,16 +112,18 @@ export default function Home() {
             </li>
           </ul>
           <Button className="mt-2 mb-5">
-            Resume <i className="fas fa-download"></i>
+            <a href="https://store1.gofile.io/download/2134bc70-7513-4f49-b2fd-c8c2cef56700/eResume.pdf">
+              Resume <i className="fas fa-download"></i>
+            </a>
           </Button>
         </nav>
       </header>
 
       <div className="w-11/12 relative m-auto z-10 overflow-hidden">
-        <BgSquare t={`${150 - offsetY * 0.02}vh`} />
-        <BgSquare t={`${140 - offsetY * 0.02}vh`} l="30%" />
-        <BgSquare t={`${350 - offsetY * 0.02}vh`} l="40%" r="20" />
-        <BgSquare t={`${340 - offsetY * 0.02}vh`} l="90%" r="20" />
+        <BgSquare t={`${150 - offsetY * 0.03}vh`} />
+        <BgSquare t={`${140 - offsetY * 0.03}vh`} l="30%" />
+        <BgSquare t={`${350 - offsetY * 0.03}vh`} l="40%" r="20" />
+        <BgSquare t={`${340 - offsetY * 0.03}vh`} l="90%" r="20" />
 
         {/* About Section */}
 
@@ -154,7 +158,7 @@ export default function Home() {
           <div className="lg:col-span-5 order-1 lg:order-3 lg:right-12 relative">
             <div className="w-9/12 md:w-full h-full relative transform scale-75 lg:scale-90 xl:scale-100 -mt-12 md:mt-0">
               <ImageContainer>
-                <Image src={img} layout="fill" objectFit="cover" alt="Gopal Subramaniyan.v.r" />
+                <Image placeholder="blur" src={img} layout="fill" objectFit="cover" alt="Gopal Subramaniyan.v.r" />
               </ImageContainer>
 
               <Square
