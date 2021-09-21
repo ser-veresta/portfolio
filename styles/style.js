@@ -36,6 +36,22 @@ ease-in
 transform
 active:scale-90
 capitalize
+cursor-pointer
+`;
+
+export const IconButton = tw.button`
+py-2
+px-3
+bg-gray-50
+hover:bg-primary-main
+rounded-md
+font-semibold
+transition-all
+duration-250
+ease-in
+transform
+active:scale-90
+cursor-pointer
 `;
 
 export const PageLink = tw.a`

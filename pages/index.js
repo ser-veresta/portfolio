@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import img from "../public/img.jpg";
-import { BgSquare, Button, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
+import { BgSquare, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 
@@ -51,7 +51,9 @@ export default function Home() {
         }
       >
         <div className="flex items-center min-h-16">
-          <h1 className="flex-grow ml-6 font-semibold text-3xl">Gopal</h1>
+          <h1 onClick={() => router.push("/")} className="cursor-pointer flex-grow ml-6 font-semibold text-3xl">
+            Gopal
+          </h1>
           <nav className="hidden md:block">
             <ul className="mr-10 flex gap-10 font-semibold">
               <li>
@@ -81,13 +83,17 @@ export default function Home() {
               Resume <i className="fas fa-download"></i>
             </a>
           </Button>
-          <Button onClick={() => setIsOpen((i) => !i)} className="mr-4 h-4/6 border-none md:hidden">
+          <IconButton onClick={() => setIsOpen((i) => !i)} className="mr-4 h-4/6 md:hidden">
             <i className="fas fa-bars"></i>
-          </Button>
+          </IconButton>
         </div>
         <nav
-          style={{ display: isOpen ? "block" : "none" }}
-          className="md:hidden transition duration-300 ease-in-out m-auto w-max text-center mt-2"
+          style={{
+            maxHeight: isOpen ? "500px" : "0px",
+            transform: isOpen ? "scale(1,1)" : "scale(1,0)",
+            transformOrigin: "top",
+          }}
+          className="md:hidden transition-all duration-300 ease-in-out m-auto w-max text-center mt-2"
         >
           <ul className="flex flex-col gap-2 font-semibold">
             <li>
@@ -137,6 +143,11 @@ export default function Home() {
             <div className="space-y-6 space-x-5">
               <h1 className="xl:text-5xl lg:text-4xl text-3xl font-semibold">Gopal Subramaniyan.V.R</h1>
               <p className="xl:text-xl lg:text-lg font-semibold">I am a Full Stack Developer</p>
+              <p className="xl:text-xl lg:text-lg text-justify font-semibold">
+                I am creative,curious and always eager to learn. I build aesthetic web applications.I have graduated
+                with a bachelor&lsquo;s degree in Aerospace Engineering from Amrita Vishwa Vidyapeetham at
+                coimbatore,india in 2020.
+              </p>
               <Button onClick={() => router.push("/#contact")}>get in touch</Button>
             </div>
           </div>
@@ -326,6 +337,30 @@ export default function Home() {
             </Button>
           </form>
         </section>
+
+        {/* footer */}
+        <footer className="min-h-16 bg-gray-50 shadow-2xl flex flex-col items-center justify-center space-y-5 py-5">
+          <ul className="flex space-x-4">
+            <li>
+              <a href="https://www.instagram.com/_ser_veresta/" rel="noreferrer" target="_blank">
+                <i className="fab fa-instagram fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ser-veresta" rel="noreferrer" target="_blank">
+                <i className="fab fa-github fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="mailTo:subramaniang573@gmail.com">
+                <i className="far fa-envelope fa-2x"></i>
+              </a>
+            </li>
+          </ul>
+          <p>
+            <i className="far fa-copyright"></i> Ser Veresta,2021 | Hosted on Vercel | Build with NextJs
+          </p>
+        </footer>
       </div>
     </>
   );
