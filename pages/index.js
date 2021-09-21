@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import img from "../public/img.jpg";
-import { BgSquare, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
+import { BgSquare, Typwriter, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 
@@ -142,7 +142,10 @@ export default function Home() {
           <div className="lg:col-span-5 flex justify-center order-3 lg:order-1 items-center -mt-20 md:-mt-12 lg:mt-0">
             <div className="space-y-6 space-x-5">
               <h1 className="xl:text-5xl lg:text-4xl text-3xl font-semibold">Gopal Subramaniyan.V.R</h1>
-              <p className="xl:text-xl lg:text-lg font-semibold">I am a Full Stack Developer</p>
+              <p className="xl:text-xl lg:text-lg font-semibold flex items-center justify-start space-x-2">
+                <div>I am a</div>
+                <Typwriter>Full Stack Developer.</Typwriter>
+              </p>
               <p className="xl:text-xl lg:text-lg text-justify font-semibold">
                 I am creative,curious and always eager to learn. I build aesthetic web applications.I have graduated
                 with a bachelor&lsquo;s degree in Aerospace Engineering from Amrita Vishwa Vidyapeetham at

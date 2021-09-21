@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const imgCont = styled.div`
   height: 22rem;
@@ -123,4 +123,33 @@ export const BgSquare = tw(bs)`
 border-2
 border-primary-light
 -z-10
+`;
+
+const typing = keyframes`
+from {
+  max-width: 0;
+}
+
+to {
+  max-width: 100%;
+}
+`;
+
+const blink_caret = keyframes`
+from,to {
+  border-color: transparent;
+}
+
+50% {
+  border-color: #ebde9b;
+}
+`;
+
+export const Typwriter = styled.span`
+  display: block;
+  overflow: hidden;
+  border-right: 15px solid #ebde9b;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: ${blink_caret} 0.75s step-end infinite, ${typing} 3.5s steps(40, end) infinite alternate;
 `;
