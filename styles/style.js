@@ -107,16 +107,15 @@ export const Triangle = styled.div.attrs((p) => ({
 `;
 
 const bs = styled.div.attrs((p) => ({
-  t: p.t || "120vh",
-  l: p.l || "70%",
-  r: p.r || "-20",
+  style: {
+    position: "absolute",
+    top: `${p.t || "120vh"}`,
+    left: `${p.l || "70%"}`,
+    transform: `translate(-50%, -50%) rotate(${p.r || "-20"}deg)`,
+  },
 }))`
   width: 120vw;
   height: 200vh;
-  position: absolute;
-  top: ${(p) => p.t};
-  left: ${(p) => p.l};
-  transform: translate(-50%, -50%) rotate(${(p) => p.r}deg);
 `;
 
 export const BgSquare = tw(bs)`

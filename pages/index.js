@@ -128,8 +128,8 @@ export default function Home() {
       <div className="w-11/12 relative m-auto z-10 overflow-hidden">
         <BgSquare t={`${150 - offsetY * 0.03}vh`} />
         <BgSquare t={`${140 - offsetY * 0.03}vh`} l="30%" />
-        <BgSquare t={`${350 - offsetY * 0.03}vh`} l="40%" r="20" />
-        <BgSquare t={`${340 - offsetY * 0.03}vh`} l="90%" r="20" />
+        <BgSquare t={`${410 - offsetY * 0.03}vh`} l="40%" r="20" />
+        <BgSquare t={`${400 - offsetY * 0.03}vh`} l="90%" r="20" />
 
         {/* About Section */}
 
@@ -137,15 +137,15 @@ export default function Home() {
 
         <section
           style={{ opacity: offsetY > 80 ? -0.0028 * offsetY + 1 : 1 }}
-          className="grid md:grid-cols-1 lg:grid-cols-11 min-h-4/5"
+          className="grid md:grid-cols-1 lg:grid-cols-11 min-h-4/5 mt-8 md:mt-0"
         >
           <div className="lg:col-span-5 flex justify-center order-3 lg:order-1 items-center -mt-20 md:-mt-12 lg:mt-0">
             <div className="space-y-6 space-x-5">
               <h1 className="xl:text-5xl lg:text-4xl text-3xl font-semibold">Gopal Subramaniyan.V.R</h1>
-              <p className="xl:text-xl lg:text-lg font-semibold flex items-center justify-start space-x-2">
+              <div className="xl:text-xl lg:text-lg font-semibold flex items-center justify-start space-x-2">
                 <div>I am a</div>
                 <Typwriter>Full Stack Developer.</Typwriter>
-              </p>
+              </div>
               <p className="xl:text-xl lg:text-lg text-justify font-semibold">
                 I am creative,curious and always eager to learn. I build aesthetic web applications.I have graduated
                 with a bachelor&lsquo;s degree in Aerospace Engineering from Amrita Vishwa Vidyapeetham at
