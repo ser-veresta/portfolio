@@ -88,3 +88,22 @@ export const Triangle = styled.div.attrs((p) => ({
   height: 6rem;
   position: absolute;
 `;
+
+const bs = styled.div.attrs((p) => ({
+  t: p.t || "120vh",
+  l: p.l || "70%",
+  r: p.r || "-20",
+}))`
+  width: 120vw;
+  height: 200vh;
+  position: absolute;
+  top: ${(p) => p.t};
+  left: ${(p) => p.l};
+  transform: translate(-50%, -50%) rotate(${(p) => p.r}deg);
+`;
+
+export const BgSquare = tw(bs)`
+border-2
+border-primary-light
+-z-10
+`;

@@ -26,6 +26,9 @@ module.exports = {
       maxHeight: {
         full_2: "50%",
       },
+      zIndex: {
+        "-10": "-10",
+      },
     },
   },
   variants: {

@@ -3,11 +3,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import img from "../public/img.jpg";
-import { Button, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
+import { BgSquare, Button, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 
 export default function Home() {
+  const router = useRouter();
   const [offsetY, setOffsetY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -116,8 +117,14 @@ export default function Home() {
 
       {offsetY > 10 && <div id="about" className="min-h-16 w-full"></div>}
 
-      {/* About Section */}
-      <div className="w-11/12 m-auto">
+      <div className="w-11/12 m-auto relative z-10 overflow-hidden">
+        <BgSquare t={`${150 - offsetY * 0.02}vh`} />
+        <BgSquare t={`${140 - offsetY * 0.02}vh`} l="30%" />
+        <BgSquare t={`${350 - offsetY * 0.02}vh`} l="40%" r="20" />
+        <BgSquare t={`${340 - offsetY * 0.02}vh`} l="90%" r="20" />
+
+        {/* About Section */}
+
         <section
           style={{ opacity: offsetY > 80 ? -0.0028 * offsetY + 1 : 1 }}
           className="grid md:grid-cols-1 lg:grid-cols-11 min-h-4/5"
@@ -126,7 +133,7 @@ export default function Home() {
             <div className="space-y-6 space-x-5">
               <h1 className="xl:text-5xl lg:text-4xl text-3xl font-semibold">Gopal Subramaniyan.V.R</h1>
               <p className="xl:text-xl lg:text-lg font-semibold">I am a Full Stack Developer</p>
-              <Button>get in touch</Button>
+              <Button onClick={() => router.push("/#contact")}>get in touch</Button>
             </div>
           </div>
           <div className="hidden order-2 lg:block">
@@ -208,7 +215,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 xl:mr-8 mb-8">
-            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4">
+            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Programming Languages</h1>
               <ul className="list-disc p-2 ml-4">
                 <li className="font-medium">Javascript</li>
@@ -217,7 +224,7 @@ export default function Home() {
                 <li className="font-medium">C#</li>
               </ul>
             </div>
-            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4">
+            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Web Front-End</h1>
               <ul className="list-disc p-2 ml-4">
                 <li className="font-medium">Html</li>
@@ -229,19 +236,19 @@ export default function Home() {
                 <li className="font-medium">Material-ui</li>
               </ul>
             </div>
-            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4">
+            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Web Back-End</h1>
               <ul className="list-disc p-2 ml-4">
                 <li className="font-medium">Node JS(Express)</li>
               </ul>
             </div>
-            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4">
+            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="txl:text-2xl lg:text-xl text-lg font-semibold">Databases</h1>
               <ul className="list-disc p-2 ml-4">
                 <li className="font-medium">MongoDb</li>
               </ul>
             </div>
-            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4">
+            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Other Tools</h1>
               <ul className="list-disc p-2 ml-4">
                 <li className="font-medium">Git</li>
@@ -260,7 +267,7 @@ export default function Home() {
           Projects
         </h1>
         <section className="grid xl:grid-cols-3 lg:grid-cols-2 grid-rows-2 gap-28 w-11/12 m-auto">
-          <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4">
+          <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
             <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold">.Tune</h1>
             <p className="xl:text-xl lg:text-lg font-semibold ml-10 mt-4">Music Streaming App</p>
             <div className="w-11/12 h-40 m-auto rounded-md mt-8 bg-gray-400"></div>
@@ -280,7 +287,7 @@ export default function Home() {
           <form
             onSubmit={sendEmail}
             autoComplete="off"
-            className="flex xl:w-1/3 lg:w-1/2 md:w-9/12 m-auto flex-col justify-start items-start p-16 shadow rounded-md border-2 border-primary-main"
+            className="flex xl:w-1/3 lg:w-1/2 md:w-9/12 m-auto flex-col justify-start items-start p-16 shadow rounded-md border-2 border-primary-main bg-gray-50"
           >
             <label htmlFor="name" className="font-semibold text-xl mt-4">
               Name:
