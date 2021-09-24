@@ -139,7 +139,7 @@ export default function Home() {
           style={{ opacity: offsetY > 80 ? -0.0028 * offsetY + 1 : 1 }}
           className="grid md:grid-cols-1 lg:grid-cols-11 min-h-4/5 mt-8 md:mt-0"
         >
-          <div className="lg:col-span-5 flex justify-center order-3 lg:order-1 items-center -mt-20 md:-mt-12 lg:mt-0">
+          <div className="lg:col-span-5 flex justify-center order-3 lg:order-1 items-center -mt-16 md:-mt-12 lg:mt-0">
             <div className="space-y-6 space-x-5">
               <h1 className="xl:text-5xl lg:text-4xl text-3xl font-semibold">Gopal Subramaniyan.V.R</h1>
               <div className="xl:text-xl lg:text-lg font-semibold flex items-center justify-start space-x-2">
