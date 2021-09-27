@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import img from "../public/img.jpg";
+import shortyy from "../public/shortyy.png";
 import { BgSquare, Typwriter, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
@@ -148,7 +149,7 @@ export default function Home() {
               </div>
               <p className="xl:text-xl lg:text-lg text-justify font-semibold">
                 I am creative,curious and always eager to learn. I build aesthetic web applications.I have graduated
-                with a bachelor&lsquo;s degree in Aerospace Engineering from Amrita Vishwa Vidyapeetham at
+                with a bachelor&apos;s degree in Aerospace Engineering from Amrita Vishwa Vidyapeetham at
                 coimbatore,india in 2020.
               </p>
               <Button onClick={() => router.push("/#contact")}>get in touch</Button>
@@ -284,14 +285,28 @@ export default function Home() {
         <h1 id="project" className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">
           Projects
         </h1>
-        <section className="grid xl:grid-cols-3 lg:grid-cols-2 grid-rows-2 gap-28 w-11/12 m-auto">
+        <section className="grid xl:grid-cols-3 lg:grid-cols-2 grid-rows-1 gap-12 w-11/12 m-auto">
           <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
-            <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold">.Tune</h1>
-            <p className="xl:text-xl lg:text-lg font-semibold ml-10 mt-4">Music Streaming App</p>
-            <div className="w-11/12 h-40 m-auto rounded-md mt-8 bg-gray-400"></div>
-            <p className="font-semibold mt-4">
-              Isn&rsquo;t it all about the tune App to stream music and make a list of you favorite music so you can
-              enjoy it later.
+            <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
+              <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
+                <a href="https://github.com/ser-veresta/url-shortener" rel="noreferrer" target="_blank">
+                  <i className="fab fa-github fa-2x"></i>
+                </a>
+              </div>
+              <div className="mr-4 p-2 rounded-md hover:bg-primary-main cursor-pointer">
+                <a href="https://url-shortener-01.netlify.app/" rel="noreferrer" target="_blank">
+                  <i className="fas fa-external-link-alt fa-2x"></i>
+                </a>
+              </div>
+            </div>
+            <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold">Shortyy</h1>
+            <p className="xl:text-xl lg:text-lg font-semibold ml-10 mt-4">URL shortening service</p>
+            <div className="w-11/12 relative rounded-md mt-8 overflow-hidden">
+              <Image placeholder="blur" layout="responsive" src={shortyy} alt="shortyy" />
+            </div>
+            <p className="font-semibold mt-4 text-justify">
+              This is more than just shorter links, Build your brand&apos;s recognition and get detailed insights on how
+              your links are performing.
             </p>
           </div>
         </section>
