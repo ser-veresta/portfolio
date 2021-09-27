@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import img from "../public/img.jpg";
-import shortyy from "../public/shortyy.png";
+import shortyy from "../public/shorty.png";
 import { BgSquare, Typwriter, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
