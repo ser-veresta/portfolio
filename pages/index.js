@@ -80,7 +80,7 @@ export default function Home() {
             </ul>
           </nav>
           <Button className="mr-10 hidden md:inline-block">
-            <a href="https://store1.gofile.io/download/2134bc70-7513-4f49-b2fd-c8c2cef56700/eResume.pdf">
+            <a href="eResume.pdf" download="Resume" target="_blank" rel="noreferrer">
               Resume <i className="fas fa-download"></i>
             </a>
           </Button>
@@ -119,25 +119,22 @@ export default function Home() {
             </li>
           </ul>
           <Button className="mt-2 mb-5">
-            <a href="https://store1.gofile.io/download/2134bc70-7513-4f49-b2fd-c8c2cef56700/eResume.pdf">
+            <a href="eResume.pdf" download="Resume" target="_blank" rel="noreferrer">
               Resume <i className="fas fa-download"></i>
             </a>
           </Button>
         </nav>
       </header>
 
-      <div className="w-11/12 relative m-auto z-10 overflow-hidden">
-        <BgSquare t={`${150 - offsetY * 0.03}vh`} />
-        <BgSquare t={`${140 - offsetY * 0.03}vh`} l="30%" />
-        <BgSquare t={`${410 - offsetY * 0.03}vh`} l="40%" r="20" />
-        <BgSquare t={`${400 - offsetY * 0.03}vh`} l="90%" r="20" />
-
+      <div className="w-11/12 relative m-auto z-10 overflow-hidden p-2 max-h-">
         {/* About Section */}
 
-        {offsetY > 10 && <div id="about" className="min-h-16 w-full"></div>}
+        {offsetY > 10 && <div className="min-h-16 w-full"></div>}
+
+        <div id="about"></div>
 
         <section
-          style={{ opacity: offsetY > 80 ? -0.0028 * offsetY + 1 : 1 }}
+          style={{ opacity: offsetY > 80 ? 1 - 0.0028 * offsetY : 1 }}
           className="grid md:grid-cols-1 lg:grid-cols-11 min-h-4/5 mt-8 md:mt-0"
         >
           <div className="lg:col-span-5 flex justify-center order-3 lg:order-1 items-center -mt-16 md:-mt-12 lg:mt-0">
@@ -201,9 +198,9 @@ export default function Home() {
 
         {/* Skills Section */}
 
-        <h1 id="skills" className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">
-          Skills
-        </h1>
+        <div id="skills"></div>
+
+        <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">Skills</h1>
         <section className="grid lg:grid-cols-2 xl:gap-24 lg:gap-18 min-h-4/5">
           <div className="hidden lg:block">
             <div className="w-full h-full relative">
@@ -282,9 +279,9 @@ export default function Home() {
 
         {/* Projects Section */}
 
-        <h1 id="project" className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">
-          Projects
-        </h1>
+        <div id="project"></div>
+
+        <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">Projects</h1>
         <section className="grid xl:grid-cols-3 lg:grid-cols-2 grid-rows-1 gap-12 w-11/12 m-auto">
           <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
             <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
@@ -312,6 +309,8 @@ export default function Home() {
         </section>
 
         {/* Contact Seection */}
+
+        <div id="contact"></div>
 
         <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">Contact Me</h1>
         <section className="pb-10">
@@ -350,36 +349,41 @@ export default function Home() {
               type="text"
               placeholder="what do you want to say.."
             />
-            <Button id="contact" className="m-auto mt-8 md:w-2/5" type="submit">
+            <Button className="m-auto mt-8 md:w-2/5" type="submit">
               contact me
             </Button>
           </form>
         </section>
 
-        {/* footer */}
-        <footer className="min-h-16 bg-gray-50 shadow-2xl flex flex-col items-center justify-center space-y-5 py-5">
-          <ul className="flex space-x-4">
-            <li>
-              <a href="https://www.instagram.com/_ser_veresta/" rel="noreferrer" target="_blank">
-                <i className="fab fa-instagram fa-2x"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/ser-veresta" rel="noreferrer" target="_blank">
-                <i className="fab fa-github fa-2x"></i>
-              </a>
-            </li>
-            <li>
-              <a href="mailTo:subramaniang573@gmail.com">
-                <i className="far fa-envelope fa-2x"></i>
-              </a>
-            </li>
-          </ul>
-          <p>
-            <i className="far fa-copyright"></i> Ser Veresta,2021 | Hosted on Vercel | Build with NextJs
-          </p>
-        </footer>
+        <BgSquare t={`${150 - offsetY * 0.04}vh`} />
+        <BgSquare t={`${140 - offsetY * 0.04}vh`} l="30%" />
+        <BgSquare t={`${310 - offsetY * 0.04}vh`} l="40%" r="20" />
+        <BgSquare t={`${300 - offsetY * 0.04}vh`} l="90%" r="20" />
       </div>
+
+      {/* footer */}
+      <footer className="min-h-16 bg-gray-50 shadow-2xl flex flex-col items-center justify-center space-y-5 py-5">
+        <ul className="flex space-x-4">
+          <li>
+            <a href="https://www.instagram.com/_ser_veresta/" rel="noreferrer" target="_blank">
+              <i className="fab fa-instagram fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ser-veresta" rel="noreferrer" target="_blank">
+              <i className="fab fa-github fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailTo:subramaniang573@gmail.com">
+              <i className="far fa-envelope fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+        <p>
+          <i className="far fa-copyright"></i> Ser Veresta,2021 | Hosted on Vercel | Build with NextJs
+        </p>
+      </footer>
     </>
   );
 }

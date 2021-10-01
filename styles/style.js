@@ -116,6 +116,11 @@ const bs = styled.div.attrs((p) => ({
 }))`
   width: 120vw;
   height: 200vh;
+
+  @media (max-width: 500px) {
+    width: 240vw;
+    height: 400vh;
+  }
 `;
 
 export const BgSquare = tw(bs)`
