@@ -47,8 +47,8 @@ export default function Home() {
       <header
         className={
           offsetY > 10
-            ? "transition duration-200 ease-in-out fixed z-20 bg-gray-50 w-full shadow-md"
-            : "transition duration-200 bg-gray-50 ease-in-out w-full shadow-0"
+            ? "transition delay-75 duration-200 ease-in-out fixed z-20 bg-gray-50 w-full shadow-md"
+            : "transition delay-100 duration-300 ease-in-out fixed z-20 bg-gray-50 w-full shadow-0"
         }
       >
         <div className="flex items-center min-h-16">
@@ -126,12 +126,10 @@ export default function Home() {
         </nav>
       </header>
 
+      <div id="about" className="min-h-16 w-full"></div>
+
       <div className="w-11/12 relative m-auto z-10 overflow-hidden p-2 max-h-">
         {/* About Section */}
-
-        {offsetY > 10 && <div className="min-h-16 w-full"></div>}
-
-        <div id="about"></div>
 
         <section
           style={{ opacity: offsetY > 80 ? 1 - 0.0028 * offsetY : 1 }}
@@ -198,9 +196,9 @@ export default function Home() {
 
         {/* Skills Section */}
 
-        <div id="skills"></div>
-
-        <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">Skills</h1>
+        <h1 id="skills" className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">
+          Skills
+        </h1>
         <section className="grid lg:grid-cols-2 xl:gap-24 lg:gap-18 min-h-4/5">
           <div className="hidden lg:block">
             <div className="w-full h-full relative">
@@ -279,9 +277,9 @@ export default function Home() {
 
         {/* Projects Section */}
 
-        <div id="project"></div>
-
-        <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">Projects</h1>
+        <h1 id="project" className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">
+          Projects
+        </h1>
         <section className="grid xl:grid-cols-3 lg:grid-cols-2 grid-rows-1 gap-12 w-11/12 m-auto">
           <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
             <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
@@ -310,9 +308,9 @@ export default function Home() {
 
         {/* Contact Seection */}
 
-        <div id="contact"></div>
-
-        <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">Contact Me</h1>
+        <h1 id="contact" className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">
+          Contact Me
+        </h1>
         <section className="pb-10">
           <form
             onSubmit={sendEmail}
@@ -355,10 +353,8 @@ export default function Home() {
           </form>
         </section>
 
-        <BgSquare t={`${150 - offsetY * 0.04}vh`} />
-        <BgSquare t={`${140 - offsetY * 0.04}vh`} l="30%" />
-        <BgSquare t={`${310 - offsetY * 0.04}vh`} l="40%" r="20" />
-        <BgSquare t={`${300 - offsetY * 0.04}vh`} l="90%" r="20" />
+        <BgSquare t={`${250 + offsetY * 0.4}`} />
+        <BgSquare t={`${150 + offsetY * 0.4}`} l="30%" />
       </div>
 
       {/* footer */}

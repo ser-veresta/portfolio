@@ -109,9 +109,9 @@ export const Triangle = styled.div.attrs((p) => ({
 const bs = styled.div.attrs((p) => ({
   style: {
     position: "absolute",
-    top: `${p.t || "120vh"}`,
+    top: "120vh",
     left: `${p.l || "70%"}`,
-    transform: `translate(-50%, -50%) rotate(${p.r || "-20"}deg)`,
+    transform: `translate(-50%, -50%) translateY(${p.t}px) rotate(${p.r || "-20"}deg)`,
   },
 }))`
   width: 120vw;
