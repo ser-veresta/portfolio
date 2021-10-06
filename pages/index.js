@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import img from "../public/img.jpg";
 import shortyy from "../public/shorty.png";
+import thewall from "../public/thewall.png";
 import { BgSquare, Typwriter, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
@@ -281,7 +282,7 @@ export default function Home() {
           Projects
         </h1>
         <section className="grid xl:grid-cols-3 lg:grid-cols-2 grid-rows-1 gap-12 w-11/12 m-auto">
-          <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
+          <div className="order-2 shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
             <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
               <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
                 <a href="https://github.com/ser-veresta/url-shortener" rel="noreferrer" target="_blank">
@@ -302,6 +303,28 @@ export default function Home() {
             <p className="font-semibold mt-4 text-justify">
               This is more than just shorter links, Build your brand&apos;s recognition and get detailed insights on how
               your links are performing.
+            </p>
+          </div>
+          <div className="order-1 shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
+            <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
+              <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
+                <a href="https://github.com/ser-veresta/wall" rel="noreferrer" target="_blank">
+                  <i className="fab fa-github fa-2x"></i>
+                </a>
+              </div>
+              <div className="mr-4 p-2 rounded-md hover:bg-primary-main cursor-pointer">
+                <a href="https://thewall.netlify.app/" rel="noreferrer" target="_blank">
+                  <i className="fas fa-external-link-alt fa-2x"></i>
+                </a>
+              </div>
+            </div>
+            <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold">The Wall</h1>
+            <p className="xl:text-xl lg:text-lg font-semibold ml-10 mt-4">Content posting service</p>
+            <div className="w-11/12 relative rounded-md mt-8 overflow-hidden">
+              <Image placeholder="blur" layout="responsive" src={thewall} alt="shortyy" />
+            </div>
+            <p className="font-semibold mt-4 text-justify">
+              Post your content here to the community and vote and downvote others content.
             </p>
           </div>
         </section>
