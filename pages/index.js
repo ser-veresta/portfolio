@@ -281,7 +281,7 @@ export default function Home() {
         <h1 id="project" className="xl:text-6xl lg:text-5xl text-4xl font-semibold text-center my-10">
           Projects
         </h1>
-        <section className="grid xl:grid-cols-3 lg:grid-cols-2 grid-rows-1 gap-12 w-11/12 m-auto">
+        <section className="grid xl:grid-cols-3 lg:grid-cols-2 gap-12 w-11/12 m-auto">
           {projects.map((item, i) => (
             <div key={i} className={`order-${item.order}`}>
               <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
