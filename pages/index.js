@@ -283,7 +283,7 @@ export default function Home() {
         </h1>
         <section className="grid xl:grid-cols-3 lg:grid-cols-2 flex-row-reverse gap-12 w-11/12 m-auto">
           {projects.map((item, i) => (
-            <div key={i} className={`order-${item.order}`}>
+            <div key={i}>
               <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
                 <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
                   <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
