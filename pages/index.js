@@ -3,8 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import img from "../public/img.jpg";
-import shortyy from "../public/shorty.png";
-import thewall from "../public/thewall.png";
+import { projects } from "../public/data";
 import { BgSquare, Typwriter, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
@@ -229,16 +228,7 @@ export default function Home() {
               </Square>
             </div>
           </div>
-          <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 xl:mr-8 mb-8">
-            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
-              <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Programming Languages</h1>
-              <ul className="list-disc p-2 ml-4">
-                <li className="font-medium">Javascript</li>
-                <li className="font-medium">Python</li>
-                <li className="font-medium">C++</li>
-                <li className="font-medium">C#</li>
-              </ul>
-            </div>
+          <div className="grid xl:grid-cols-2 lg:grid-cols-2 gap-8 xl:mr-8 mb-8">
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Web Front-End</h1>
               <ul className="list-disc p-2 ml-4">
@@ -252,9 +242,20 @@ export default function Home() {
               </ul>
             </div>
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
+              <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Other Tools</h1>
+              <ul className="list-disc p-2 ml-4">
+                <li className="font-medium">Git</li>
+                <li className="font-medium">GitHub</li>
+                <li className="font-medium">VScode</li>
+                <li className="font-medium">Atom</li>
+                <li className="font-medium">Notion</li>
+              </ul>
+            </div>
+            <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Web Back-End</h1>
               <ul className="list-disc p-2 ml-4">
-                <li className="font-medium">Node JS(Express)</li>
+                <li className="font-medium">NodeJs(Express)</li>
+                <li className="font-medium">Socket.io</li>
               </ul>
             </div>
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
@@ -264,13 +265,12 @@ export default function Home() {
               </ul>
             </div>
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
-              <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Other Tools</h1>
+              <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Programming Languages</h1>
               <ul className="list-disc p-2 ml-4">
-                <li className="font-medium">Git</li>
-                <li className="font-medium">GitHub</li>
-                <li className="font-medium">VScode</li>
-                <li className="font-medium">Atom</li>
-                <li className="font-medium">Notion</li>
+                <li className="font-medium">Javascript</li>
+                <li className="font-medium">Python</li>
+                <li className="font-medium">C++</li>
+                <li className="font-medium">C#</li>
               </ul>
             </div>
           </div>
@@ -282,51 +282,36 @@ export default function Home() {
           Projects
         </h1>
         <section className="grid xl:grid-cols-3 lg:grid-cols-2 grid-rows-1 gap-12 w-11/12 m-auto">
-          <div className="order-2 shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
-            <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
-              <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
-                <a href="https://github.com/ser-veresta/url-shortener" rel="noreferrer" target="_blank">
-                  <i className="fab fa-github fa-2x"></i>
-                </a>
-              </div>
-              <div className="mr-4 p-2 rounded-md hover:bg-primary-main cursor-pointer">
-                <a href="https://url-shortener-01.netlify.app/" rel="noreferrer" target="_blank">
-                  <i className="fas fa-external-link-alt fa-2x"></i>
-                </a>
-              </div>
-            </div>
-            <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold">Shortyy</h1>
-            <p className="xl:text-xl lg:text-lg font-semibold ml-10 mt-4">URL shortening service</p>
-            <div className="w-11/12 relative rounded-md mt-8 overflow-hidden">
-              <Image placeholder="blur" layout="responsive" src={shortyy} alt="shortyy" />
-            </div>
-            <p className="font-semibold mt-4 text-justify">
-              This is more than just shorter links, Build your brand&apos;s recognition and get detailed insights on how
-              your links are performing.
-            </p>
-          </div>
-          <div className="order-1 shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
-            <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
-              <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
-                <a href="https://github.com/ser-veresta/wall" rel="noreferrer" target="_blank">
-                  <i className="fab fa-github fa-2x"></i>
-                </a>
-              </div>
-              <div className="mr-4 p-2 rounded-md hover:bg-primary-main cursor-pointer">
-                <a href="https://thewall.netlify.app/" rel="noreferrer" target="_blank">
-                  <i className="fas fa-external-link-alt fa-2x"></i>
-                </a>
+          {projects.map((item, i) => (
+            <div key={i} className={`order-${item.order}`}>
+              <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
+                <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
+                  <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
+                    <a href={item.gitLink} rel="noreferrer" target="_blank">
+                      <i className="fab fa-github fa-2x"></i>
+                    </a>
+                  </div>
+                  <div className="mr-4 p-2 rounded-md hover:bg-primary-main cursor-pointer">
+                    <a href={item.link} rel="noreferrer" target="_blank">
+                      <i className="fas fa-external-link-alt fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+                <h1 className="xl:text-5xl lg:text-4xl text-3xl font-semibold">{item.name}</h1>
+                <p className="flex flex-wrap gap-3 items-center font-semibold ml-8 mt-4">
+                  {item.tags.map((tag, i) => (
+                    <span key={i}>
+                      <span className="bg-primary-main px-3 py-1 rounded-full">{tag}</span>
+                    </span>
+                  ))}
+                </p>
+                <div className="w-11/12 relative rounded-md mt-8 overflow-hidden">
+                  <Image placeholder="blur" layout="responsive" src={item.img} alt={item.name} />
+                </div>
+                <p className="font-semibold mt-4 text-justify">{item.desc}</p>
               </div>
             </div>
-            <h1 className="xl:text-6xl lg:text-5xl text-4xl font-semibold">The Wall</h1>
-            <p className="xl:text-xl lg:text-lg font-semibold ml-10 mt-4">Content posting service</p>
-            <div className="w-11/12 relative rounded-md mt-8 overflow-hidden">
-              <Image placeholder="blur" layout="responsive" src={thewall} alt="shortyy" />
-            </div>
-            <p className="font-semibold mt-4 text-justify">
-              Post your content here to the community and vote and downvote others content.
-            </p>
-          </div>
+          ))}
         </section>
 
         {/* Contact Seection */}
