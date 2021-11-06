@@ -48,7 +48,7 @@ export const projects = [
     img: Gogl,
     desc: `Google search engine clone with rapidApi`,
     gitLink: "https://github.com/ser-veresta/Gogl",
-    link: "https://gogll.netlify.app/search",
+    link: "https://gogll.netlify.app",
     order: "5",
   },
   {
