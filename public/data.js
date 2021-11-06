@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     name: "The Wall",
-    tags: ["ReactJs", "MongoDb", "Express"],
+    tags: ["ReactJs", "MongoDb", "Express","TailwindCSS"],
     img: thewall,
     desc: `Post your content here to the community and vote and downvote others content.`,
     gitLink: "https://github.com/ser-veresta/wall",
@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     name: "Vidy",
-    tags: ["ReactJs", "SocketIo", "MaterilaUI"],
+    tags: ["ReactJs", "SocketIo", "Materila-UI"],
     img: vidy,
     desc: "Video chat application",
     gitLink: "https://github.com/ser-veresta/vidy",
@@ -35,7 +35,7 @@ export const projects = [
   },
   {
     name: "Shortyy",
-    tags: ["ReactJs", "MongoDb", "Express"],
+    tags: ["ReactJs", "MongoDb", "Express","Material-UI"],
     img: shortyy,
     desc: `This is more than just shorter links, Build your brand&apos;s recognition and get detailed insights on how your links are performing.`,
     gitLink: "https://github.com/ser-veresta/url-shortener",
@@ -44,7 +44,7 @@ export const projects = [
   },
   {
     name: "Gogl",
-    tags: ["TailwindCSS", "ReactJs", "RapidApi"],
+    tags: ["TailwindCSS", "ReactJs", "RapidApi","Material-UI"],
     img: Gogl,
     desc: `Google search engine clone with rapidApi`,
     gitLink: "https://github.com/ser-veresta/Gogl",
