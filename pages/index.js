@@ -284,7 +284,7 @@ export default function Home() {
         <section className="grid xl:grid-cols-3 lg:grid-cols-2 flex-row-reverse gap-12 w-11/12 m-auto">
           {projects.map((item, i) => (
             <div key={i}>
-              <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
+              <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50 h-full">
                 <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
                   <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
                     <a href={item.gitLink} rel="noreferrer" target="_blank">
@@ -368,11 +368,6 @@ export default function Home() {
       {/* footer */}
       <footer className="min-h-16 bg-gray-50 shadow-2xl flex flex-col items-center justify-center space-y-5 py-5">
         <ul className="flex space-x-4">
-          <li>
-            <a href="https://www.instagram.com/_ser_veresta/" rel="noreferrer" target="_blank">
-              <i className="fab fa-instagram fa-2x"></i>
-            </a>
-          </li>
           <li>
             <a href="https://github.com/ser-veresta" rel="noreferrer" target="_blank">
               <i className="fab fa-github fa-2x"></i>
