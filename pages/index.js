@@ -255,6 +255,7 @@ export default function Home() {
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Web Back-End</h1>
               <ul className="list-disc p-2 ml-4">
                 <li className="font-medium">NodeJs(Express)</li>
+                <li className="font-medium">GraphQL</li>
                 <li className="font-medium">Socket.io</li>
               </ul>
             </div>
@@ -262,6 +263,7 @@ export default function Home() {
               <h1 className="txl:text-2xl lg:text-xl text-lg font-semibold">Databases</h1>
               <ul className="list-disc p-2 ml-4">
                 <li className="font-medium">MongoDb</li>
+                <li className="font-medium">MySql</li>
               </ul>
             </div>
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
