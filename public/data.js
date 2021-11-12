@@ -1,7 +1,7 @@
 import shortyy from "./shorty.png";
 import thewall from "./thewall.png";
-import weatherPWA from "./weatherPWA.png";
-import Gogl from "./Gogl.png";
+import PassManager from "./passManager.png";
+import BookArchive from "./bookArchive.png";
 import vidy from "./vidy.png";
 import eshop from "./eshop.png";
 
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     name: "The Wall",
-    tags: ["ReactJs", "MongoDb", "Express","TailwindCSS"],
+    tags: ["ReactJs", "MongoDb", "Express", "TailwindCSS"],
     img: thewall,
     desc: `Post your content here to the community and vote and downvote others content.`,
     gitLink: "https://github.com/ser-veresta/wall",
@@ -35,7 +35,7 @@ export const projects = [
   },
   {
     name: "Shortyy",
-    tags: ["ReactJs", "MongoDb", "Express","Material-UI"],
+    tags: ["ReactJs", "MongoDb", "Express", "Material-UI"],
     img: shortyy,
     desc: `This is more than just shorter links, Build your brand&apos;s recognition and get detailed insights on how your links are performing.`,
     gitLink: "https://github.com/ser-veresta/url-shortener",
@@ -43,21 +43,21 @@ export const projects = [
     order: "4",
   },
   {
-    name: "Gogl",
-    tags: ["TailwindCSS", "ReactJs", "RapidApi","Material-UI"],
-    img: Gogl,
-    desc: `Google search engine clone with rapidApi`,
-    gitLink: "https://github.com/ser-veresta/Gogl",
+    name: "Book Archive",
+    tags: ["MaterialUI", "ReactJs", "GraphQl", "Apollo", "MongoDb"],
+    img: BookArchive,
+    desc: `Simple Storage of data about your favorite books using GraphQl.`,
+    gitLink: "https://github.com/ser-veresta/BookArchive",
     link: "https://gogll.netlify.app",
     order: "5",
   },
   {
-    name: "Weather App",
-    tags: ["PWA", "ReactJs"],
-    img: weatherPWA,
-    desc: `Search weather of any city with this progressive web app.`,
-    gitLink: "https://github.com/ser-veresta/weatherPWA",
-    link: "https://weather-pwa-01.netlify.app/",
+    name: "PassManager",
+    tags: ["MaterialUI", "ReactJs", "MySQL", "Express"],
+    img: PassManager,
+    desc: `A safe place to store all your passwords.`,
+    gitLink: "https://github.com/ser-veresta/PassManager",
+    link: "https://pass-manager-01.netlify.app/",
     order: "6",
   },
 ];
