@@ -48,7 +48,7 @@ export const projects = [
     img: BookArchive,
     desc: `Simple Storage of data about your favorite books using GraphQl.`,
     gitLink: "https://github.com/ser-veresta/BookArchive",
-    link: "https://gogll.netlify.app",
+    link: "https://book-archive-02.netlify.app/",
   },
   {
     name: "Vidy",
