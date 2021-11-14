@@ -288,13 +288,6 @@ export default function Home() {
             <div key={i}>
               <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50 h-full">
                 <div className="flex gap-3 justify-end items-center transform scale-75 origin-right">
-                  {item.accLink && (
-                    <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
-                      <a href={item.accLink} rel="noreferrer" target="_blank">
-                        <i className="fas fa-user-circle fa-2x"></i>
-                      </a>
-                    </div>
-                  )}
                   <div className="p-2 rounded-md hover:bg-primary-main cursor-pointer">
                     <a href={item.gitLink} rel="noreferrer" target="_blank">
                       <i className="fab fa-github fa-2x"></i>
