@@ -5,6 +5,8 @@ import BookArchive from "./bookArchive.png";
 import vidy from "./vidy.png";
 import eshop from "./eshop.png";
 
+export const eResumeLink = "https://drive.google.com/file/d/1NabN8jq0wtfROZBR3QzZLadDCFwMlmio/view?usp=sharing";
+
 export const projects = [
   {
     name: "E_Shop.",

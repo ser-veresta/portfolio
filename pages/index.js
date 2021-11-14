@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import img from "../public/img.jpg";
-import { projects } from "../public/data";
+import { projects, eResumeLink } from "../public/data";
 import { BgSquare, Typwriter, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
@@ -80,7 +80,7 @@ export default function Home() {
             </ul>
           </nav>
           <Button className="mr-10 hidden md:inline-block">
-            <a href="eResume.pdf" download="Resume" target="_blank" rel="noreferrer">
+            <a href={eResumeLink} target="_blank" rel="noreferrer">
               Resume <i className="fas fa-download"></i>
             </a>
           </Button>
@@ -119,7 +119,7 @@ export default function Home() {
             </li>
           </ul>
           <Button className="mt-2 mb-5">
-            <a href="eResume.pdf" download="Resume" target="_blank" rel="noreferrer">
+            <a href={eResumeLink} target="_blank" rel="noreferrer">
               Resume <i className="fas fa-download"></i>
             </a>
           </Button>
