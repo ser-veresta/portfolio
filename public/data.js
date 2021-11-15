@@ -33,7 +33,7 @@ export const projects = [
     desc: `A safe place to store all your passwords using mysql database as storage.`,
     gitLink: "https://github.com/ser-veresta/PassManager",
     accLink: "https://github.com/ser-veresta/PassManager/blob/main/README.md",
-    link: "https://pass-manager-01.netlify.app/",
+    link: "https://passmanager01.netlify.app/",
   },
   {
     name: "Shortyy",
