@@ -2,8 +2,20 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import img from "../public/img.jpg";
+import img from "../public/images/img.jpg";
 import { projects, eResumeLink } from "../public/data";
+import GraphQL from "../public/svg/graphQL.svg";
+import JS from "../public/svg/js.svg";
+import MongoDb from "../public/svg/mongodb.svg";
+import MySql from "../public/svg/mysql.svg";
+import NodeJs from "../public/svg/nodejs.svg";
+import Notion from "../public/svg/notion.svg";
+import Python from "../public/svg/python.svg";
+import ReactIcon from "../public/svg/react.svg";
+import Next from "../public/svg/next-js.svg";
+import Tailwind from "../public/svg/tailwind-css.svg";
+import VsCode from "../public/svg/vscode.svg";
+import { MaterialSVG } from "../components/MaterialSVG";
 import { BgSquare, Typwriter, Button, IconButton, ImageContainer, PageLink, Square, Triangle } from "../styles/style";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
@@ -231,48 +243,83 @@ export default function Home() {
           <div className="grid xl:grid-cols-2 lg:grid-cols-2 gap-8 xl:mr-8 mb-8">
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Web Front-End</h1>
-              <ul className="list-disc p-2 ml-4">
-                <li className="font-medium">Html</li>
-                <li className="font-medium">CSS</li>
-                <li className="font-medium">React</li>
-                <li className="font-medium">Next Js</li>
-                <li className="font-medium">Bootstrap</li>
-                <li className="font-medium">Tailwind CSS</li>
-                <li className="font-medium">Material-ui</li>
+              <ul className="list-disc p-2 ml-4 flex flex-col gap-2">
+                {/* <li className="font-medium">Html</li>
+                <li className="font-medium">CSS</li> */}
+                <li className="font-medium flex items-center gap-2">
+                  <ReactIcon className="w-icon" />
+                  React
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <Next className="w-icon h-6" />
+                  Next Js
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <Tailwind className="w-icon" />
+                  Tailwind CSS
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <MaterialSVG className="w-icon" />
+                  Material-ui
+                </li>
               </ul>
             </div>
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Other Tools</h1>
-              <ul className="list-disc p-2 ml-4">
-                <li className="font-medium">Git</li>
-                <li className="font-medium">GitHub</li>
-                <li className="font-medium">VScode</li>
-                <li className="font-medium">Atom</li>
-                <li className="font-medium">Notion</li>
+              <ul className="list-disc p-2 ml-4 flex flex-col gap-2">
+                <li className="font-medium flex items-center gap-2">
+                  <i className="fab fa-github fa-2x"></i> <div>GitHub</div>
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <VsCode className="w-icon" />
+                  Visual Studio Code
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <Notion className="w-icon" />
+                  Notion
+                </li>
               </ul>
             </div>
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Web Back-End</h1>
-              <ul className="list-disc p-2 ml-4">
-                <li className="font-medium">NodeJs(Express)</li>
-                <li className="font-medium">GraphQL</li>
-                <li className="font-medium">Socket.io</li>
+              <ul className="list-none p-2 ml-4 flex flex-col gap-2">
+                <li className="font-medium flex items-center gap-2">
+                  <NodeJs className="w-icon" /> NodeJs(Express)
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <GraphQL className="w-icon " />
+                  GraphQL
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <Image width="30px" height="30px" src="https://socket.io/images/logo.svg" alt="socket_io" />
+                  Socket.io
+                </li>
               </ul>
             </div>
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="txl:text-2xl lg:text-xl text-lg font-semibold">Databases</h1>
-              <ul className="list-disc p-2 ml-4">
-                <li className="font-medium">MongoDb</li>
-                <li className="font-medium">MySql</li>
+              <ul className="list-disc p-2 ml-4 flex flex-col gap-2">
+                <li className="font-medium flex items-center gap-2">
+                  <MongoDb className="w-icon" />
+                  MongoDb
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <MySql className="w-icon" />
+                  MySql
+                </li>
               </ul>
             </div>
             <div className="shadow-xl rounded-md border-2 border-primary-main flex flex-col p-4 bg-gray-50">
               <h1 className="xl:text-2xl lg:text-xl text-lg font-semibold">Programming Languages</h1>
-              <ul className="list-disc p-2 ml-4">
-                <li className="font-medium">Javascript</li>
-                <li className="font-medium">Python</li>
-                <li className="font-medium">C++</li>
-                <li className="font-medium">C#</li>
+              <ul className="list-disc p-2 ml-4 flex flex-col gap-2">
+                <li className="font-medium flex items-center gap-2">
+                  <JS className="w-icon" />
+                  Javascript
+                </li>
+                <li className="font-medium flex items-center gap-2">
+                  <Python className="w-icon" />
+                  Python
+                </li>
               </ul>
             </div>
           </div>
@@ -307,7 +354,7 @@ export default function Home() {
                     </span>
                   ))}
                 </p>
-                <div className="w-11/12 relative rounded-md mt-8 overflow-hidden">
+                <div className="w-11/12 h-46 relative rounded-md mt-8 overflow-hidden">
                   <Image placeholder="blur" layout="responsive" src={item.img} alt={item.name} />
                 </div>
                 <p className="font-semibold mt-4 text-justify">{item.desc}</p>

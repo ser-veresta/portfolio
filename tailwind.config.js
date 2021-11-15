@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         inconsolata: ["Inconsolata", "monospace"],
       },
+      width: {
+        icon: "30px",
+      },
       minHeight: {
         "1/2": "50vh",
         "2/3": "75vh",

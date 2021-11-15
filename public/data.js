@@ -1,9 +1,9 @@
-import shortyy from "./shorty.png";
-import thewall from "./thewall.png";
-import PassManager from "./passManager.png";
-import BookArchive from "./bookArchive.png";
-import vidy from "./vidy.png";
-import eshop from "./eshop.png";
+import shortyy from "./images/shorty.png";
+import thewall from "./images/thewall.png";
+import PassManager from "./images/passManager.png";
+import BookArchive from "./images/bookArchive.png";
+import vidy from "./images/vidy.png";
+import eshop from "./images/eshop.png";
 
 export const eResumeLink = "https://drive.google.com/file/d/1NabN8jq0wtfROZBR3QzZLadDCFwMlmio/view?usp=sharing";
 
@@ -30,7 +30,7 @@ export const projects = [
     name: "PassManager",
     tags: ["MaterialUI", "ReactJs", "MySQL", "Express"],
     img: PassManager,
-    desc: `A safe place to store all your passwords.`,
+    desc: `A safe place to store all your passwords using mysql database as storage.`,
     gitLink: "https://github.com/ser-veresta/PassManager",
     accLink: "https://github.com/ser-veresta/PassManager/blob/main/README.md",
     link: "https://pass-manager-01.netlify.app/",
@@ -48,7 +48,7 @@ export const projects = [
     name: "Book Archive",
     tags: ["MaterialUI", "ReactJs", "GraphQl", "Apollo", "MongoDb"],
     img: BookArchive,
-    desc: `Simple Storage of data about your favorite books using GraphQl.`,
+    desc: `Simple Storage of data about your favorite books using GraphQl querying language instead of rest Api`,
     gitLink: "https://github.com/ser-veresta/BookArchive",
     link: "https://book-archive-02.netlify.app/",
   },
@@ -56,7 +56,7 @@ export const projects = [
     name: "Vidy",
     tags: ["ReactJs", "SocketIo", "Materila-UI"],
     img: vidy,
-    desc: "Video chat application",
+    desc: "Video chat application made using WebRTC as base for video calling.You are given and id initially u can share it with people so that they can call you.",
     gitLink: "https://github.com/ser-veresta/vidy",
     link: "https://vidy.netlify.app/",
   },
