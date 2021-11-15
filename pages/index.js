@@ -388,8 +388,8 @@ export default function Home() {
               Email:
             </label>
             <input
-              id="email"
-              name="email"
+              id="FromEmail"
+              name="FromEmail"
               className="w-full h-8 p-2 border-2 rounded focus:border-primary-main focus:outline-none"
               type="text"
               placeholder="Enter your email.."
